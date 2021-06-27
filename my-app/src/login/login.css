@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 .login-wrapper {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.login-form{
+  margin-top: 50px;
+  padding: 50px;
+  border: 1px solid #d6cb69;
+  border-radius: 25px;
+  height: 50%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-text{
+  margin-top: 0px;
+}
+
+.login-button{
+  margin-top: 30px;
+  display: left;
 }
