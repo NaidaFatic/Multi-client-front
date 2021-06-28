@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import './login.css';
-import '../register/register';
 
 async function loginUser(credentials) {
  return fetch('https://multi-client-app.herokuapp.com/api/users/login', {
@@ -49,7 +47,7 @@ export default function Login({ setToken }) {
       <button className="social-signin facebook">Log in with facebook</button>
       <button className="social-signin google">Log in with Google+</button>
       <span className="signup">Don't have an account?</span>
-      <Link className="signup-register" onClick={showRegister}> Register!</Link>
+      <a className="signup-register" href="/register"> Register!</a>
     </div>
     <div className="or">OR</div>
     </div>
