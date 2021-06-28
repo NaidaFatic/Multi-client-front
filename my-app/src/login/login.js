@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import BackdropFilter from "react-backdrop-filter";
 import './login.css';
 
 async function loginUser(credentials) {
@@ -28,39 +27,24 @@ export default function Login({ setToken }) {
   }
 
   return(
-    <div className="login-wrapper">
-    <div className="container">
-    <BackdropFilter
-      className="bluredForm"
-      filter={"blur(10px) sepia(50%)"}
-      canvasFallback={true}
-      html2canvasOpts={{
-        allowTaint: true}}
-      onDraw={() => {
-        console.log("Rendered !");
-      }}
-      >
-      <h1>Please Log In</h1>
-      <form onSubmit={handleSubmit} >
-        <label>
-          <p>Email</p>
-          <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-        </label>
-          <button type="submit">Submit</button>
-          <p> Don't have account? </p>
-          <a className="register" href="/register"> Register</a>
-      </form>
-      </BackdropFilter>
-      </div>
-      <div className="circle1">
-    </div>
-    <div className="circle2">
-    </div>
-    </div>
+    <div id="login-box">
+    <form onSubmit={handleSubmit} >
+  <div className="left">
+    <h1>Log in</h1>
+    <input type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}/>
+    <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+    <button type="submit">Submit</button>
+  </div>
+    </form>
+  <div className="right">
+    <span className="loginwith">Sign in with<br />social network</span>
+    <button className="social-signin facebook">Log in with facebook</button>
+    <button className="social-signin google">Log in with Google+</button>
+    <span className="signup">Don't have an account?</span>
+    <a className="signup-register" href="/register"> Register!</a>
+  </div>
+  <div className="or">OR</div>
+</div>
   )
 }
 
