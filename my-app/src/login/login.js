@@ -4,7 +4,7 @@ import BackdropFilter from "react-backdrop-filter";
 import './login.css';
 
 async function loginUser(credentials) {
- return fetch('http://localhost:8080/api/users/login', {
+ return fetch('https://multi-client-app.herokuapp.com/api/users/login', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
