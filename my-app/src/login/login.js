@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import BackdropFilter from "react-backdrop-filter";
 import './login.css';
 
 async function loginUser(credentials) {
@@ -28,20 +29,37 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
+    <div className="container">
+    <BackdropFilter
+      className="bluredForm"
+      filter={"blur(10px) sepia(50%)"}
+      canvasFallback={true}
+      html2canvasOpts={{
+        allowTaint: true}}
+      onDraw={() => {
+        console.log("Rendered !");
+      }}
+      >
       <h1>Please Log In</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} >
         <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setEmail(e.target.value)} />
+          <p>Email</p>
+          <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
         </label>
         <label>
           <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
+          <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
         </label>
-        <div>
           <button type="submit">Submit</button>
-        </div>
+          <p> Don't have account? </p>
+          <a className="register" href="/register"> Register</a>
       </form>
+      </BackdropFilter>
+      </div>
+      <div className="circle1">
+    </div>
+    <div className="circle2">
+    </div>
     </div>
   )
 }

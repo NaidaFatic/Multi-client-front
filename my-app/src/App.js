@@ -15,11 +15,15 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
-      <BrowserRouter>
+    <BrowserRouter>
+        <Switch>
+          <Route path="/login">
+            <Login/>
+          </Route>
+        </Switch>
         <Switch>
           <Route path="/dashboard">
-            <Dashboard />
+              <Dashboard />
           </Route>
         </Switch>
       </BrowserRouter>

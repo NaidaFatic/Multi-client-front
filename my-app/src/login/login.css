@@ -5,25 +5,106 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Dosis', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #ffd1ee, #f7f7be);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.login-form{
-  margin-top: 50px;
-  padding: 50px;
-  border: 1px solid #d6cb69;
-  border-radius: 25px;
-  height: 50%;
-  width: 20%;
+form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  width: inherit;
+  height: inherit;
+}
+
+label{
+  margin-top: 10%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+input{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+button{
+  margin-top: 20%;
+  margin-bottom: 20%;
+  min-width: 120%;
+  font-size: x-large;
+  border-radius: 4px;
 }
 
 .login-text{
-  margin-top: 0px;
+  margin-top: 50px;
 }
 
 .login-button{
   margin-top: 30px;
   display: left;
+}
+
+h1{
+  font-size: 50px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  color: #b381db;
+}
+
+.register{
+  margin-bottom: 10%;
+  text-decoration: underline;
+}
+
+.bluredForm {
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    width: 30%;
+    min-height: 55vh;
+    border-radius: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.circle1,.circle2{
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,1), rgba(255, 255, 255, 0.5));
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    border-radius: 50%
+}
+
+.circle1{
+  top: 5%;
+  right: 15%;
+}
+
+.circle2{
+  bottom: 5%;
+  left: 15%;
 }
