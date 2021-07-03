@@ -55,6 +55,10 @@ input[type="password"] {
   transition: 0.2s ease;
 }
 
+.error{
+  color: red;
+}
+
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-bottom: 2px solid #16a085;
