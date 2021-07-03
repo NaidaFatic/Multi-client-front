@@ -16,9 +16,9 @@ body {
 
 #login-box-register{
   position: relative;
-  margin: 2% auto;
+  margin: 5% auto;
   width: 800px;
-  height: 830px;
+  height: 750px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -146,6 +146,19 @@ input[type="submit"]:active {
   color: #000000;
   text-align: center;
   text-decoration: underline;
+}
+
+.name-surname {
+  display: inline-flex;
+}
+
+input[type="text"].register.register.surname{
+  margin-left: 10px;
+  width: 150px;
+}
+
+input[type="text"].register.register.name{
+  width: 140px;
 }
 
 button.social-signin-register {

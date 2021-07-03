@@ -31,8 +31,10 @@ export default function Register({ setToken }) {
       <form onSubmit={handleSubmit} className="register">
     <div className="left-register">
       <h1>Sign In</h1>
-      <input className="register" type="text" name="name" placeholder="Name" />
-      <input className="register" type="text" name="surname" placeholder="Surname" />
+      <div className="name-surname">
+      <input className="register name" type="text" name="name" placeholder="Name" />
+      <input className="register surname" type="text" name="surname" placeholder="Surname" />
+      </div>
       <input className="register" type="text" name="phone" placeholder="Phone number" />
       <input className="register" type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}/>
       <input className="register" type="text" name="companyname" placeholder="Company name" />
