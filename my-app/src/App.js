@@ -3,21 +3,21 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Dashboard from './dashboard/dashboard';
-import Login from './login/login';
+import LoginRegister from './login-register/login-register';
 import useToken from './useToken';
 
 function App() {
   const { token, setToken } = useToken();
 
   if(!token) {
-    return <Login setToken={setToken} />
+    return <LoginRegister setToken={setToken} />
   }
   return (
     <div className="wrapper">
     <BrowserRouter>
         <Switch>
           <Route path="/login">
-            <Login/>
+            <LoginRegister/>
           </Route>
         </Switch>
         <Switch>

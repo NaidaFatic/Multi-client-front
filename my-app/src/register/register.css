@@ -13,24 +13,26 @@ body {
   font-weight: 300;
 }
 
-#login-box {
+
+#login-box-register{
   position: relative;
-  margin: 5% auto;
+  margin: 2% auto;
   width: 800px;
-  height: 400px;
+  height: 830px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.left {
+
+.left-register {
   position: absolute;
   top: 0;
   left: 0;
   box-sizing: border-box;
   padding: 43px;
-  width: 300px;
-  height: 400px;
+  width: auto;
+  height: auto;
 }
 
 h1 {
@@ -39,8 +41,8 @@ h1 {
   font-size: 28px;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"].register,
+input[type="password"].register {
   display: block;
   box-sizing: border-box;
   margin-bottom: 40px;
@@ -62,7 +64,7 @@ input[type="password"]:focus {
   transition: 0.2s ease;
 }
 
-input[type="submit"] {
+input[type="submit"].register {
   margin-top: 28px;
   width: 300px;
   height: 32px;
@@ -96,9 +98,9 @@ input[type="submit"]:active {
   transition: 0.1s ease;
 }
 
-.or {
+.or-register {
   position: absolute;
-  top: 180px;
+  top: 400px;
   left: 280px;
   width: 40px;
   height: 40px;
@@ -107,24 +109,22 @@ input[type="submit"]:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 40px;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 100px
 }
 
-.right {
+.right-register {
   position: absolute;
-  top: 20px;
-  right: 0;
+  top: 250px;
+  right: 40px;
   box-sizing: unset;
-  padding: 40px;
   width: 300px;
   height: 300px;
-  background: url('https://goo.gl/YbktSj');
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
 }
 
-.right .loginwith {
+.right-register .loginwith {
   display: block;
   font-size: 28px;
   color: #000000;
@@ -132,25 +132,23 @@ input[type="submit"]:active {
   margin-bottom: 10px;
 }
 
-.right .signup {
+.right-register .signup {
   display: block;
   font-size: 18px;
   color: #000000;
   text-align: center;
   margin-top: 20px;
-  width: 300px;
 }
 
-.right .signup-register{
+.right-register .signup-register{
   display: block;
   font-size: 18px;
   color: #000000;
   text-align: center;
   text-decoration: underline;
-  width: 300px;
 }
 
-button.social-signin {
+button.social-signin-register {
   margin-bottom: 20px;
   width: 220px;
   height: 36px;
@@ -163,23 +161,23 @@ button.social-signin {
   cursor: pointer;
 }
 
-button.social-signin:hover,
+button.social-signin-register:hover,
 button.social-signin:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease;
 }
 
-button.social-signin:active {
+button.social-signin-register:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease;
 }
 
-button.social-signin.facebook {
+button.social-signin-register.facebook {
   background: #32508E;
   width: 300px;
 }
 
-button.social-signin.google {
+button.social-signin-register.google {
   background: #DD4B39;
   margin-bottom: 41px;
   width: 300px;
