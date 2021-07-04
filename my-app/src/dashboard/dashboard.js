@@ -13,18 +13,18 @@ export default function Dashboard() {
       </div>
     </div>
     <div id="dash-box">
+    <div className="left">
+      <div className="profile-picture"></div>
+      <div className="message"></div>
+      <div className="phone"></div>
+    </div>
       <div className="post">
         <div className="post-desc">
         <div className="name">Title</div>
         <div className="description">Description</div>
+        <div className="price">3$</div>
         </div>
         <div className="post-image"></div>
-        <div className="price">3$</div>
-      </div>
-      <div className="left">
-        <div className="profile-picture"></div>
-        <div className="message"></div>
-        <div className="phone"></div>
       </div>
     </div>
     </div>
