@@ -18,7 +18,7 @@ export default class Post extends React.Component{
               <div className="post-desc">
               <div className="post-name">{this.props.name}</div>
               <div className="description">{this.props.desc}</div>
-              <div className="price">{this.props.price}</div>
+              <div className="price">{this.props.price}$</div>
               </div>
               <div className="post-image"></div>
               </div>
