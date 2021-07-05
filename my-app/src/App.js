@@ -5,12 +5,11 @@ import './App.css';
 import Login from './login/login';
 import Dashboard from './dashboard/dashboard';
 import Register from './register/register';
+import Profile from './profile/profile';
 import useToken from './useToken';
 
 function App() {
   const { token, setToken } = useToken();
-  if(token)
-   return <Dashboard />
 
   return (
     <div className="wrapper">
@@ -33,6 +32,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register setToken={setToken}/>
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </BrowserRouter>

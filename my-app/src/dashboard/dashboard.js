@@ -30,7 +30,7 @@ async componentDidMount() {
   return(
     <div className="dash">
     <div className="profile-left">
-      <div className="profile-picture-left"></div>
+      <a href="/profile"> <div className="profile-picture-left"></div></a>
       <div className="company-name">{this.state.user}</div>
       <div className="saved-posts">
         <div className="saved-name">Saved Posts</div>

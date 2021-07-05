@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.profile{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.coverPicture{
+  background-image: url('../images/coverPicture.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 430px;
+  border-radius: 1rem;
+  font-size: x-large;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.profileProfile{
+  background-image: url('../images/ProfilePicture.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: auto;
+  height: inherit;
+  border-radius: 50%;
+}
+
+.profile-dash{
+  display: flex;
+
+}
+
+.left-profile {
+  position: relative;
+  margin-left: 5px;
+  box-sizing: border-box;
+  flex: 0.5;
+  margin-right: 10%;
+}
+
+.right-profile {
+  position: inherit;
+  box-sizing: border-box;
+  flex: 0.5;
+  margin-right: 5px;
+}
+
+.profile-company-name {
+  background: #ECECEC;
+  width: inherit;
+  height: auto;
+  text-align: center;
+  border-radius: 2rem;
+  font-size: 50px;
+}
+
+.profile-company-description{
+  margin-top: 5%;
+  background: #ECECEC;
+  width: inherit;
+  height: 42%;
+  padding: 2%;
+  border-radius: 2rem;
+}
+
+.profile-company-description-text{
+  display: flex;
+  margin-top: 5%;
+  font-size: x-large;
+  font-style: italic;
+}
+
+.text:hover {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.text{
+  width: -webkit-fill-available;
+  background: #ECECEC;
+  position: relative;
+}
+
+.text-hidden{
+    position: absolute;
+    margin-left: 50px;
+}
+
+.text-hidden:hover{
+    position: absolute;
+    margin-left: 50px;
+}
+
+.desc-image{
+  width: 50px;
+  height: 50px;
+}
+
+.plus-image{
+  position: absolute;
+  cursor: pointer;
+}
+
+.modal{
+  position: absolute;
+  margin: 25%;
+  width: 1000px;
+  height: 700px;
+  background: #F9F9F9;
+  box-shadow: 0 5px 6px rgb(0 0 0 / 40%);
+  top: 0;
+  border-radius: 2rem;
+  padding: 3%;
+}
+
+.modal p{
+  text-align: center;
+  font-size: xx-large;
+}
+
+.modal button{
+  margin: 60px;
+  width: 300px;
+  height: 32px;
+  background: #cca831;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+.modal input{
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  padding: 4px;
+  width: -webkit-fill-available;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+.modal input[type="text"]:focus,
+.modal input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+.modal form{
+  margin: 10%;
+}
+
+.buttons{
+  display: flex;
+}
