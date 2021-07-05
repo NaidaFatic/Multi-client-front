@@ -25,6 +25,9 @@ body {
 
 .dash{
   display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 6%;
 }
 
 .display{
@@ -45,7 +48,10 @@ body {
   flex: 0.2;
   justify-content: center;
   margin: 5%;
-  height: 700px;
+  height: fit-content;
+  background: #e3e3e3;
+  padding: 5%;
+  border-radius: 2rem;
 }
 
 .company-name {
@@ -54,7 +60,6 @@ body {
   height: auto;
   text-align: center;
   background: #F9F9F9;
-  margin-left: 12%;
   border-radius: 2rem;
   margin-bottom: 10px;
 }
@@ -63,7 +68,6 @@ body {
   background-image: url('../images/profilePic2.png');
   background-repeat: no-repeat;
   height: 250px;
-  margin-left: 12%;
 }
 .profile-picture {
   background-image: url('../images/profilePic.png');
@@ -76,9 +80,8 @@ body {
 
 .saved-posts{
   background: #ECECEC;
-  height: inherit;
+  height: auto;
   width: 230px;
-  margin-left: 12%;
   margin-top: 5%;
   display: inline-table;
 }
@@ -180,7 +183,7 @@ body {
 
 .post-image{
   background-image: url('../images/postPic.png');
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   width: auto;
   border-radius: 1rem;
