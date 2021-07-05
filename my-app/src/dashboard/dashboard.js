@@ -35,7 +35,7 @@ export default function Dashboard() {
   var articles = useFetch();
   console.log(Array.isArray(articles.articles));
   console.log(articles.articles);
-  articles.articles.forEach((item, i) => {console.log(item);});
+  articles.articles.map((item, i) => (console.log(item)));
   return(
     <div className="dash">
     <div className="profile-left">
@@ -46,7 +46,9 @@ export default function Dashboard() {
         <div className="saved-name">{article.article}</div>
       </div>
     </div>
-    <Post name={"name"} desc={"desc"} price={"3$"} />
+    <div className="posts">{articles.articles.map((item, i) => (
+    <Post name={item.name} desc={item.description} price={item.price} /> ))}
+    </div>
     </div>
   );
 }

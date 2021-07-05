@@ -16,12 +16,11 @@ body {
 #dash-box {
   position: relative;
   margin: 5% auto;
-  margin-right: 150px;
   flex: 0.8;
   background: #ededed;
   border-radius: 2rem;
   display: flex;
-  height: 100%;
+  margin-bottom: 10px;
 }
 
 .dash{
@@ -121,13 +120,23 @@ body {
 
 .post {
   position: relative;
-  top: 40px;
   right: 50px;
+  padding: 10px;
+  border-radius: 1rem;
+  margin-right: 10px;
+  height: 100%;
+  flex: 0.8;
+}
+
+.posts {
+  margin-top: 5%;
+  position: relative;
   padding: 10px;
   background: #e3e3e3;
   border-radius: 1rem;
   margin-right: 10px;
-  flex: 0.8;
+  flex: 0.7;
+  height: 100%;
 }
 
 .post-desc {
@@ -171,12 +180,12 @@ body {
 
 .post-image{
   background-image: url('../images/postPic.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   width: auto;
-  height: 530px;
   border-radius: 1rem;
   font-size: x-large;
   font-style: italic;
   margin-top: 15px;
+  height: 500px;
 }
