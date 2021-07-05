@@ -49,20 +49,20 @@ body {
 }
 
 .company-name {
-  position: absolute;
+  position: relative;
   width: 230px;
   height: auto;
   text-align: center;
-  top: 40%;
   background: #F9F9F9;
   margin-left: 12%;
   border-radius: 2rem;
+  margin-bottom: 10px;
 }
 
 .profile-picture-left {
   background-image: url('../images/profilePic2.png');
   background-repeat: no-repeat;
-  height: 300px;
+  height: 250px;
   margin-left: 12%;
 }
 .profile-picture {
@@ -188,4 +188,9 @@ body {
   font-style: italic;
   margin-top: 15px;
   height: 500px;
+}
+
+.user-info{
+  height: 80px;
+  top: 20%;
 }

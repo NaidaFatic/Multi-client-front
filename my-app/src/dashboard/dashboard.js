@@ -7,7 +7,9 @@ import decoded from "../utils/decodeToken";
 
 class Dashboard extends React.Component{
     state = {
-        user:null,
+        user_name:null,
+        user_surname:null,
+        company_name:null,
         article:null,
         posts: []
     }
@@ -20,7 +22,7 @@ async componentDidMount() {
     let retrieved_article = result_article.data;
     let result_articles = await fetchData("articles/", "GET")
     let retrieved_articles = result_articles.data;
-    this.setState({user:retrieved_user.company_name ,article:retrieved_article.name, posts: retrieved_articles}  )
+    this.setState({user_name:retrieved_user.name, user_surname:retrieved_user.surname, company_name:retrieved_user.company_name ,article:retrieved_article.name, posts: retrieved_articles}  )
 }
 
 
@@ -31,7 +33,11 @@ async componentDidMount() {
     <div className="dash">
     <div className="profile-left">
       <a href="/profile"> <div className="profile-picture-left"></div></a>
-      <div className="company-name">{this.state.user}</div>
+      <div className="user-info">
+        <div className="company-name">{this.state.user_name}</div>
+        <div className="company-name">{this.state.user_surname}</div>
+        <div className="company-name">{this.state.company_name}</div>
+      </div>
       <div className="saved-posts">
         <div className="saved-name">Saved Posts</div>
         <div className="saved-name">{this.state.article}</div>
