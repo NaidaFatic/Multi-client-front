@@ -28,6 +28,9 @@ body {
   display: flex;
 }
 
+.display{
+}
+
 .left {
   position: relative;
   margin-left: 5px;
@@ -135,7 +138,7 @@ body {
   padding: 10px;
 }
 
-.name {
+.post-name {
   background: #C4C4C4;
   width: auto;
   height: 50px;
