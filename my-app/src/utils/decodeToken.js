@@ -5,10 +5,10 @@ export default async function decoded() {
        console.log(JSON.stringify(decoded));
        return decoded;
    } catch (error) {
-       if(error.message === "jwt expired"){
-           sessionStorage.removeItem("token");
-           window.location="/login";
-           alert("Your session token has expired, please log in once again to confirm your identity!");
+      if(error.message === "jwt expired"){
+        sessionStorage.removeItem("token");
+        window.location="/login";
+        alert("Your session token has expired, please log in once again to confirm your identity!");
        }
    }
 }

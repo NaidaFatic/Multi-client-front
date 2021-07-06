@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect, BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import './App.css';
 import Login from './login/login';
 import Dashboard from './dashboard/dashboard';
@@ -16,15 +15,15 @@ function App() {
     <div className="wrapper">
     <BrowserRouter>
         <Switch>
-        <Route exact path="/dashboard" render={() => (
-          token ? (
-            <Route path="/dashboard">
-              <Dashboard/>
-            </Route>
-         ) : (
-           <Redirect to="/login"/>
-              )
-          )}/>
+          <Route exact path="/dashboard" render={() => (
+            token ? (
+              <Route path="/dashboard">
+                <Dashboard/>
+              </Route>
+             ) : (
+             <Redirect to="/login"/>
+             )
+           )}/>
           <Route path="/dashboard">
             <Dashboard/>
           </Route>

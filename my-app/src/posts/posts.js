@@ -11,18 +11,19 @@ export default class Post extends React.Component{
   }
 
   async componentDidMount(){
-        let result_user = await fetchData("users/"+this.props.user_id, "GET")
-        let retrieved_user = result_user.data;
-        this.setState({user:retrieved_user})
-    }
+      let result_user = await fetchData("users/"+this.props.user_id, "GET")
+      let retrieved_user = result_user.data;
+      this.setState({user:retrieved_user})
+  }
 
-    render(){
-      var myStr = this.props.date+" "
-      var subStr = myStr.substr(0, 10);
-      const user = this.state.user;
-      const id = this.props.user_id;
-      const url = "/user/"+id;
-        return(
+  render(){
+    var myStr = this.props.date+" "
+    var subStr = myStr.substr(0, 10);
+    const user = this.state.user;
+    const id = this.props.user_id;
+    const url = "/user/"+id;
+
+      return(
           <div id="dash-box">
           <div className="left">
             <a href={url} ><div className="profile-picture"></div></a>
@@ -42,6 +43,6 @@ export default class Post extends React.Component{
               <div className="post-image"></div>
               </div>
               </div>
-        )
+          )
     }
 }

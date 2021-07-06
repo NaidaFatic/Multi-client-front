@@ -10,7 +10,7 @@ async function logoutUser() {
 
 export default function NavBar() {
   const logoutF = async e => {
-    const response = await logoutUser();
+  await logoutUser();
   }
 
   return(
