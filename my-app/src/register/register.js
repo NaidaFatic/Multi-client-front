@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import fetchData from "../utils/ajax";
 import './register.css';
 
 async function registerUser(credentials) {
- return fetch('https://multi-client-app.herokuapp.com/api/users/', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
+ return fetchData("users/", "POST", credentials)
 }
 
 export default function Register({ setToken }) {

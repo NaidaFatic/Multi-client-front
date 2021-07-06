@@ -26,9 +26,8 @@ export default function Login({ setToken }) {
       setError(response.error);
       console.log(response.error);
     }
-  }
-
-  return(
+ }
+ return(
       <div>
         <div id="login-box">
           <form onSubmit={handleSubmit} >
