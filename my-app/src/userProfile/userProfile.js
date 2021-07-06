@@ -39,8 +39,9 @@ async componentDidMount() {
 }
 
  render(){
-
   const user = this.state.user;
+  var myStr = user.date_of_start+" "
+  var subStr = myStr.substr(0, 10);
   return(
     <div className="profile-wrapper">
     <NavBar/>
@@ -59,7 +60,7 @@ async componentDidMount() {
             <div className="profile-company-description-text"><div className="desc-image"> <img src={location} alt="logo"/></div><div className="text-hidden">BIH, Sarajevo</div> <div className="text">Location</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={fb} alt="logo"/></div><div className="text-hidden">www.facebook.com</div> <div className="text">Facebook</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={linked} alt="logo"/></div> <div className="text-hidden">www.linkedin.com</div><div className="text">LinkedIn</div></div>
-            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{user.date_of_start}</div><div className="text">Date of creating profile</div></div>
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{subStr}</div><div className="text">Date of creating profile</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={menu} alt="logo"/></div> <div className="text-hidden">{user.description}</div><div className="text">Description</div></div>
           </div>
         </div>
@@ -67,7 +68,7 @@ async componentDidMount() {
           <img src=""className="plus-image"/>
           <div className="profile-company-name" >Articles </div>
           {this.state.posts.map(post => (
-          <Post key={post._id} name={post.name} desc={post.description} price={post.price} user_id={this.state.uid}/>
+          <Post key={post._id} name={post.name} desc={post.description} price={post.price} user_id={this.state.uid} date={post.date_of_post}/>
           ))}
         </div>
        </div>

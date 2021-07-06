@@ -46,7 +46,7 @@ async componentDidMount() {
       </div>
     </div>
     <div className="posts">{this.state.posts.map((item, i) => (
-    <Post key={item._id} name={item.name} desc={item.description} price={item.price} user_id={item.user_id}/> ))}
+    <Post key={item._id} name={item.name} desc={item.description} price={item.price} user_id={item.user_id} date={item.date_of_post}/> ))}
     </div>
     </div>
     </div>

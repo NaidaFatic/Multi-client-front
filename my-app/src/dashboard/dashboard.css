@@ -162,10 +162,10 @@ body {
 .description {
   background: #C4C4C4;
   width: auto;
-  height: 70px;
   border-radius: 1rem;
   font-size: x-large;
   font-style: italic;
+  margin-bottom: 2%;
 }
 
 .price {

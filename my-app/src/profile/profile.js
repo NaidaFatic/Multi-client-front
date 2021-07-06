@@ -95,7 +95,7 @@ async componentDidMount() {
           <img src={plus} alt="logo" className="plus-image" onClick={this.handleOpenModal}/>
           <div className="profile-company-name" >Articles </div>
           {this.state.posts.map(post => (
-          <Post key={post._id} name={post.name} desc={post.description} price={post.price} user_id={this.state.uid}/>
+          <Post key={post._id} name={post.name} desc={post.description} price={post.price} user_id={this.state.uid} date={post.date_of_post}/>
           ))}
         </div>
       </div>

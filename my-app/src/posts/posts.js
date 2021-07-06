@@ -17,6 +17,8 @@ export default class Post extends React.Component{
     }
 
     render(){
+      var myStr = this.props.date+" "
+      var subStr = myStr.substr(0, 10);
       const user = this.state.user;
       const id = this.props.user_id;
       const url = "/user/"+id;
@@ -34,6 +36,7 @@ export default class Post extends React.Component{
               <div className="post-desc">
               <div className="post-name">{this.props.name}</div>
               <div className="description">{this.props.desc}</div>
+              <div className="date">Date: {subStr}</div>
               <div className="price">{this.props.price}$</div>
               </div>
               <div className="post-image"></div>

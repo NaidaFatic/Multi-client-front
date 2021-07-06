@@ -23,6 +23,9 @@ img {
   max-height: 135%;
 }
 
+.date{
+  font-size: large;
+}
 
 .post-content {
   display: flex;
