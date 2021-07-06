@@ -13,6 +13,9 @@ body {
   font-weight: 300;
 }
 
+.error-div{
+  display: grid;
+}
 
 #login-box-register{
   position: relative;
