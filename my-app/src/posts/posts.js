@@ -18,11 +18,12 @@ export default class Post extends React.Component{
 
     render(){
       const user = this.state.user;
-
+      const id = this.props.user_id;
+      const url = "/user/"+id;
         return(
           <div id="dash-box">
           <div className="left">
-            <a href="/profile"><div className="profile-picture"></div></a>
+            <a href={url} ><div className="profile-picture"></div></a>
             <div className="user-info">
               <div className="company-name-posts">{user.name}</div>
               <div className="company-name-posts">{user.surname}</div>

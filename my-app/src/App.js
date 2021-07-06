@@ -6,6 +6,7 @@ import Login from './login/login';
 import Dashboard from './dashboard/dashboard';
 import Register from './register/register';
 import Profile from './profile/profile';
+import UserProfile from './userProfile/userProfile';
 import useToken from './useToken';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/profile">
             <Profile />
           </Route>
+          <Route path="/user/:id" render={(props) => <UserProfile {...props} />}/>
         </Switch>
       </BrowserRouter>
     </div>
