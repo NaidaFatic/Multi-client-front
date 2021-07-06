@@ -23,6 +23,7 @@ img {
   max-height: 135%;
 }
 
+
 .post-content {
   display: flex;
 }
@@ -80,4 +81,15 @@ button:hover {
   color: white;
   background-color: purple;
   transition: 0.3s;
+}
+
+
+.company-name-posts {
+  position: relative;
+  height: auto;
+  text-align: center;
+  background: #F9F9F9;
+  border-radius: 2rem;
+  margin-bottom: 10px;
+  width: 130px;
 }

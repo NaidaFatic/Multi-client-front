@@ -60,7 +60,7 @@ async componentDidMount() {
     let retrieved_user = result.data;
     let result_article = await fetchData("articles/individual/"+decode.uid, "GET")
     let retrieved_article = result_article.data;
-    this.setState({user:retrieved_user ,posts:retrieved_article, uid: decode.uid}  )
+    this.setState({user:retrieved_user ,posts:retrieved_article, uid: decode.uid})
 
 }
 
@@ -91,7 +91,7 @@ async componentDidMount() {
           <img src={plus} alt="logo" className="plus-image" onClick={this.handleOpenModal}/>
           <div className="profile-company-name" >Articles </div>
           {this.state.posts.map(post => (
-          <Post key={post._id} name={post.name} desc={post.description} price={post.price} />
+          <Post key={post._id} name={post.name} desc={post.description} price={post.price} user_id={this.state.uid}/>
           ))}
         </div>
       </div>

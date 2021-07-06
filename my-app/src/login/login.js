@@ -38,7 +38,7 @@ export default function Login({ setToken }) {
       <div>
         <div id="login-box">
           <form onSubmit={handleSubmit} >
-          <div className="left">
+          <div className="left-login">
             <h1>Log in</h1>
             <input type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}/>
             <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />

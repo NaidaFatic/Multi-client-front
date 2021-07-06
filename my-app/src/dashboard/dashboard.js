@@ -23,13 +23,12 @@ async componentDidMount() {
     let retrieved_article = result_article.data;
     let result_articles = await fetchData("articles/", "GET")
     let retrieved_articles = result_articles.data;
-    this.setState({user_name:retrieved_user.name, user_surname:retrieved_user.surname, company_name:retrieved_user.company_name ,article:retrieved_article.name, posts: retrieved_articles}  )
+    this.setState({user_name:retrieved_user.name, user_surname:retrieved_user.surname, company_name:retrieved_user.company_name ,article:retrieved_article.name, posts: retrieved_articles})
 }
 
 
  render(){
-  console.log(this.state.posts);
-  this.state.posts.map((item, i) => (console.log(item)));
+  this.state.posts.map((item, i) => (console.log(item.user_id)));
   return(
     <div>
     <NavBar/>
@@ -47,7 +46,7 @@ async componentDidMount() {
       </div>
     </div>
     <div className="posts">{this.state.posts.map((item, i) => (
-    <Post key={item._id} name={item.name} desc={item.description} price={item.price} /> ))}
+    <Post key={item._id} name={item.name} desc={item.description} price={item.price} user_id={item.user_id}/> ))}
     </div>
     </div>
     </div>
