@@ -116,8 +116,8 @@ body {
 }
 
 .modal{
-  position: absolute;
-  margin: 25%;
+  position: fixed;
+  margin-left: 25%;
   width: 1000px;
   height: 700px;
   background: #F9F9F9;
@@ -125,6 +125,7 @@ body {
   top: 0;
   border-radius: 2rem;
   padding: 3%;
+  margin-top: 5%;
 }
 
 .modal p{

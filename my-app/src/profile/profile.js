@@ -83,8 +83,8 @@ async componentDidMount() {
             <div className="profile-company-description-text"><div className="desc-image"> <img src={location} alt="logo"/></div><div className="text-hidden">BIH, Sarajevo</div> <div className="text">Location</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={fb} alt="logo"/></div><div className="text-hidden">www.facebook.com</div> <div className="text">Facebook</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={linked} alt="logo"/></div> <div className="text-hidden">www.linkedin.com</div><div className="text">LinkedIn</div></div>
-            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{user.date_of_start}</div><div className="text">date_of_start</div></div>
-            <div className="profile-company-description-text"><div className="desc-image"> <img src={menu} alt="logo"/></div> <div className="text-hidden">{user.description}</div><div className="text">description</div></div>
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{user.date_of_start}</div><div className="text">Date of creating profile</div></div>
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={menu} alt="logo"/></div> <div className="text-hidden">{user.description}</div><div className="text">Description</div></div>
           </div>
         </div>
         <div className="right-profile">
