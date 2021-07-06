@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import fetchData from "../utils/ajax";
 import './login.css';
 
 async function loginUser(credentials) {
- return fetch('https://multi-client-app.herokuapp.com/api/users/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
+ return fetchData("users/login", "POST", credentials)
 }
 
 export default function Login({ setToken }) {
@@ -40,8 +34,8 @@ export default function Login({ setToken }) {
           <form onSubmit={handleSubmit} >
           <div className="left-login">
             <h1>Log in</h1>
-            <input type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}/>
-            <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+            <input type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)} required/>
+            <input type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>
             { error && <label className="error"> {error} </label> }
             <input type="submit" name="signup_submit" value="Log in"/>
           </div>

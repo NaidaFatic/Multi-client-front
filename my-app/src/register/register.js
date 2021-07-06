@@ -46,15 +46,15 @@ export default function Register({ setToken }) {
           <div className="left-register">
             <h1>Sign In</h1>
             <div className="name-surname">
-              <input className="register name" type="text" name="name" placeholder="Name" onChange={e => setName(e.target.value)}/>
-              <input className="register surname" type="text" name="surname" placeholder="Surname" onChange={e => setSurname(e.target.value)}/>
+              <input className="register name" type="text" name="name" placeholder="Name" onChange={e => setName(e.target.value)} required/>
+              <input className="register surname" type="text" name="surname" placeholder="Surname" onChange={e => setSurname(e.target.value)} required/>
             </div>
-            <input className="register" type="text" name="phone" placeholder="Phone number" onChange={e => setPhone(e.target.value)}/>
-            <input className="register" type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}/>
-            <input className="register" type="text" name="companyname" placeholder="Company name" onChange={e => setCompanyName(e.target.value)}/>
-            <input className="register" type="text" name="companyemail" placeholder="Company email" onChange={e => setCompanyEmail(e.target.value)}/>
-            <input className="register" type="text" name="description" placeholder="Company description" onChange={e => setDescription(e.target.value)}/>
-            <input className="register" type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+            <input className="register" type="text" name="phone" placeholder="Phone number" onChange={e => setPhone(e.target.value)} required/>
+            <input className="register" type="text" name="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)} required/>
+            <input className="register" type="text" name="companyname" placeholder="Company name" onChange={e => setCompanyName(e.target.value)} required/>
+            <input className="register" type="text" name="companyemail" placeholder="Company email" onChange={e => setCompanyEmail(e.target.value)} required/>
+            <input className="register" type="text" name="description" placeholder="Company description" onChange={e => setDescription(e.target.value)} required/>
+            <input className="register" type="password" name="password" placeholder="Password" onChange={e => setPassword(e.target.value)} required/>
             <div className="error-div">
               { error && <label className="error"> {error} </label> }
               <input className="register" type="submit" name="signup_submit" value="Register" />
