@@ -175,3 +175,7 @@ body {
 .buttons{
   display: flex;
 }
+
+.profile-wrapper{
+  top: 0;
+}

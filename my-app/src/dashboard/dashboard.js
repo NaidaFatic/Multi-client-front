@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import Post from "../posts/posts";
+import NavBar from "../navbar/navbar";
 import './dashboard.css';
 import fetchData from "../utils/ajax";
 import decoded from "../utils/decodeToken";
@@ -30,6 +31,8 @@ async componentDidMount() {
   console.log(this.state.posts);
   this.state.posts.map((item, i) => (console.log(item)));
   return(
+    <div>
+    <NavBar/>
     <div className="dash">
     <div className="profile-left">
       <a href="/profile"> <div className="profile-picture-left"></div></a>
@@ -45,6 +48,7 @@ async componentDidMount() {
     </div>
     <div className="posts">{this.state.posts.map((item, i) => (
     <Post key={item._id} name={item.name} desc={item.description} price={item.price} /> ))}
+    </div>
     </div>
     </div>
   );

@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import './profile.css';
 import fetchData from "../utils/ajax";
 import decoded from "../utils/decodeToken";
 import Post from "../posts/posts";
 import mail from '../images/Gmail.png';
-import phone from '../images/Phone.png';
+import phone from '../images/call.png';
 import calendar from '../images/googlecalendar.png';
 import menu from '../images/Menu.png';
 import location from '../images/googlemaps.png';
@@ -12,6 +12,7 @@ import fb from '../images/Facebook.png';
 import linked from '../images/linkedin.png';
 import plus from '../images/bookmark-plus.png';
 import Modal from 'react-modal';
+import NavBar from "../navbar/navbar";
 
 Modal.setAppElement('#root');
 
@@ -66,6 +67,8 @@ async componentDidMount() {
  render(){
   const user = this.state.user;
   return(
+    <div className="profile-wrapper">
+    <NavBar/>
     <div className="profile" id="profile">
     <div id="blure">
       <div className="coverPicture">
@@ -110,6 +113,7 @@ async componentDidMount() {
             </div>
           </form>
         </Modal>
+    </div>
     </div>
   );
  }

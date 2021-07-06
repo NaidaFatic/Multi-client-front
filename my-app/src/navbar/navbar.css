@@ -1,0 +1,37 @@
+.navbar{
+  display: flex;
+  background: #ECECEC;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.78;
+  top: 0;
+}
+
+.dash-navbar{
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.pofile{
+  margin-left: 10px;
+}
+
+.logout{
+  right: 0;
+  position: absolute;
+  margin-right: 10px;
+}
+
+.logo-navbar{
+  text-decoration: none;
+  font-size: xxx-large;
+  font-style: italic;
+  text-align: center;
+  margin-left: 40%;
+}
+
+.logo-navbar a{
+ color: #16A085;
+}
