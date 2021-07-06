@@ -1,8 +1,6 @@
 import React from "react"
-import { useParams } from "react-router-dom";
 import './profile.css';
 import fetchData from "../utils/ajax";
-import decoded from "../utils/decodeToken";
 import Post from "../posts/posts";
 import mail from '../images/Gmail.png';
 import phone from '../images/call.png';
@@ -10,8 +8,8 @@ import calendar from '../images/googlecalendar.png';
 import menu from '../images/Menu.png';
 import location from '../images/googlemaps.png';
 import fb from '../images/Facebook.png';
-import linked from '../images/linkedin.png';
-import plus from '../images/bookmark-plus.png';
+import linked from '../images/linkedin.png'
+import user_pic from '../images/user.png';
 import NavBar from "../navbar/navbar";
 
 
@@ -55,6 +53,7 @@ async componentDidMount() {
         <div className="left-profile">
           <div className="profile-company-name">{user.company_name}</div>
           <div className="profile-company-description">
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={user_pic} alt="logo"/></div> <div className="text-hidden">{user.name+" "+user.surname}</div> <div className="text">Owners Full Name</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={mail} alt="logo"/></div> <div className="text-hidden">{user.company_email}</div> <div className="text">Company E-mail</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={phone} alt="logo"/></div><div className="text-hidden">{user.phone}</div> <div className="text">Phone Number</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={location} alt="logo"/></div><div className="text-hidden">BIH, Sarajevo</div> <div className="text">Location</div></div>

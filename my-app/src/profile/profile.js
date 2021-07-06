@@ -11,6 +11,7 @@ import location from '../images/googlemaps.png';
 import fb from '../images/Facebook.png';
 import linked from '../images/linkedin.png';
 import plus from '../images/bookmark-plus.png';
+import user_pic from '../images/user.png';
 import Modal from 'react-modal';
 import NavBar from "../navbar/navbar";
 
@@ -66,6 +67,8 @@ async componentDidMount() {
 
  render(){
   const user = this.state.user;
+   var myStr = user.date_of_start+" "
+   var subStr = myStr.substr(0, 10);
   return(
     <div className="profile-wrapper">
     <NavBar/>
@@ -78,12 +81,13 @@ async componentDidMount() {
         <div className="left-profile">
           <div className="profile-company-name">{user.company_name}</div>
           <div className="profile-company-description">
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={user_pic} alt="logo"/></div> <div className="text-hidden">{user.name+" "+user.surname}</div> <div className="text">Owners Full Name</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={mail} alt="logo"/></div> <div className="text-hidden">{user.company_email}</div> <div className="text">Company E-mail</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={phone} alt="logo"/></div><div className="text-hidden">{user.phone}</div> <div className="text">Phone Number</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={location} alt="logo"/></div><div className="text-hidden">BIH, Sarajevo</div> <div className="text">Location</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={fb} alt="logo"/></div><div className="text-hidden">www.facebook.com</div> <div className="text">Facebook</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={linked} alt="logo"/></div> <div className="text-hidden">www.linkedin.com</div><div className="text">LinkedIn</div></div>
-            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{user.date_of_start}</div><div className="text">Date of creating profile</div></div>
+            <div className="profile-company-description-text"><div className="desc-image"> <img src={calendar} alt="logo"/></div> <div className="text-hidden">{subStr}</div><div className="text">Date of creating profile</div></div>
             <div className="profile-company-description-text"><div className="desc-image"> <img src={menu} alt="logo"/></div> <div className="text-hidden">{user.description}</div><div className="text">Description</div></div>
           </div>
         </div>
